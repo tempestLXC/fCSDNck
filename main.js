@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         fCSDNck 
-// @namespace    https://github.com/tempestLXC
+// @namespace    https://github.com/tempestLXC/fCSDNck
 // @version      0.0.2
 // @description  屏蔽百度搜索结果中 CSDN 相关搜索结果
 // @author       tempestlxc
