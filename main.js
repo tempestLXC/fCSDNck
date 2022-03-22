@@ -12,11 +12,12 @@
 (function() {
     'use strict';
     var CSDN='-(csdn)';
-    var button = document.createElement("button"); 
+    var button = document.createElement("button");
+    button.id = "bdIndexButton"
     button.className = "btn self-btn bg s_btn";
     button.textContent = "fCSDNck";
-    button.style.background = "#e33e33"; 
-
+    button.style.background = "#e33e33";
+    button.style.display = "none";
     button.addEventListener("click", clickBotton);
 
     function clickBotton(){
@@ -27,6 +28,15 @@
     }
 
     var like_comment = document.getElementById('s_btn_wr');
+
+    if(!isEmpty(like_comment)){
+        var span = document.getElementById(like_comment.id);
+
+        span.onmouseover = function() { button.style.display = "block"; };
+
+        span.onmouseout = function() { button.style.display = "none"; };
+
+    }
     like_comment.appendChild(button);
 
     function isEmpty(obj){
