@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         fCSDNck 
 // @namespace    https://github.com/tempestLXC/fCSDNck
-// @version      0.0.2
+// @version      0.0.3
 // @description  屏蔽百度搜索结果中 CSDN 相关搜索结果
 // @author       tempestlxc
 // @match        *://www.baidu.com/*
