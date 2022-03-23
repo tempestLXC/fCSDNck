@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         fCSDNck 
+// @name         fCSDNck
 // @namespace    https://github.com/tempestLXC/fCSDNck
-// @version      0.0.3
+// @version      0.0.4
 // @description  屏蔽百度搜索结果中 CSDN 相关搜索结果
 // @author       tempestlxc
 // @match        *://www.baidu.com/*
@@ -27,17 +27,27 @@
         }
     }
 
-    var like_comment = document.getElementById('s_btn_wr');
+
+    function getTargetElement(){
+
+        var targetElement = document.getElementById('su'); 
+        return targetElement;
+    }
+
+    var like_comment = getTargetElement();
+
 
     if(!isEmpty(like_comment)){
-        var span = document.getElementById(like_comment.id);
+
+        var span = like_comment.parentElement;
 
         span.onmouseover = function() { button.style.display = "block"; };
 
         span.onmouseout = function() { button.style.display = "none"; };
 
+        span.appendChild(button);
     }
-    like_comment.appendChild(button);
+
 
     function isEmpty(obj){
     if(typeof obj == "undefined" || obj == null || obj == ""){
